@@ -1,0 +1,139 @@
+/*******************************************************************************
+********************************************************************************
+Default Settings
+********************************************************************************
+*******************************************************************************/
+* {
+    padding: 0;
+    margin: 0;
+}
+html {background-color: var(--background-color);}
+svg {padding: 3rem;}
+/* NOTE: Colors */
+:root {
+    --background-color: #f4faf5;
+    --pink-text: #f5c2bc;
+    --hover-text: #f2a399;
+    --balloon-text-fill: #f4f0df;
+    --balloon-fill: #faffd1;
+    --squid-fill: #d5dfff;
+    --squid-wheel-fill: #fff;
+    --hanger-fill: #daffd8;
+}
+
+/* NOTE: Standard Text Formatting */
+text {
+  isolation:isolate;
+  font-size:40px;
+  font-family:HarlowSolid, Harlow Solid Italic;
+}
+
+.Falling-Balloons text, #Hanger-Master text {
+  fill:var(--pink-text);
+  stroke:#000;
+  stroke-miterlimit:10;
+}
+/*******************************************************************************
+********************************************************************************
+Illustrator Build
+********************************************************************************
+*******************************************************************************/
+/* NOTE: Squid Styling */
+#Wheel {fill:var(--squid-wheel-fill);}
+.sw-6{fill:none;}
+.sw-2, .sw-3, .sw-4, .sw-5, .sw-6{stroke:#000;stroke-miterlimit:10;}
+.sw-2{stroke-width:5px;}
+.sw-3{fill:var(--squid-fill);}
+.sw-3, .sw-5{stroke-width:2px;}
+/* NOTE: Balloon-1 Styling */
+.b1-1,.b1-2,.b1-3,.b1-4,.b1-5{stroke:#000;stroke-miterlimit:10;}
+.b1-1,.b1-2{stroke-width:1.5px;}
+.b1-2,.b1-4{fill:var(--balloon-fill);}
+.b1-3{fill:none;}
+.b1-5{fill:var(--balloon-text-fill);stroke-width:3px;}
+/* NOTE: Balloon-2 Styling */
+.b2-1{fill:var(--balloon-text-fill);stroke-width:3px;}
+.b2-1,.b2-3,.b2-4,.b2-5,.b2-6{stroke:#000;stroke-miterlimit:10;}
+.b2-3{fill:none;}
+.b2-4,.b2-5{stroke-width:1.5px;}
+.b2-5,.b2-6{fill:var(--balloon-fill);}
+/* NOTE: Balloon-3 Styling */
+.b3-1{fill:var(--balloon-text-fill);stroke-width:2.5px;}
+.b3-1,.b3-2,.b3-3,.b3-4,.b3-5,.b3-6{stroke:#000;stroke-miterlimit:10;}
+.b3-3{fill:none;}
+.b3-4,.b3-5{stroke-width:1.3px;}
+.b3-5,.b3-6{fill:var(--balloon-fill);}
+.b3-7 {font-size:32px}
+/* NOTE: Hanger Styling */
+.h-1{fill:var(--hanger-fill);}
+.h-1,.h-2,.h-3{stroke:#000;stroke-miterlimit:10;}
+.h-1,.h-2{stroke-width:2px;}
+.h-3{fill:var(--balloon-text-fill);stroke-width:3px;}
+/*******************************************************************************
+********************************************************************************
+Hover Build
+********************************************************************************
+*******************************************************************************/
+.Falling-Balloons text:hover, #Hanger-Master text:hover {
+  fill:var(--hover-text);
+}
+/*******************************************************************************
+********************************************************************************
+Positioning Build
+********************************************************************************
+*******************************************************************************/
+#Squid-Wheel {
+  transform-origin: center;
+}
+#Squid-Master {
+  height: 65%;
+  width: 65%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#Hanger-Master{
+  height: 35%;
+  width: 16%;
+  position: fixed;
+  left:50%;
+  top:0%;
+  transform: translate(-230%,-22%);
+}
+#Head-Master,#Arms-Master {
+  position: relative;
+  left:inherit;
+  top:inherit;
+  transform: translate(0%,0%);
+}
+#Hanger-Eye,
+#FB1-Eye, #FB2-Eye, #FB3-Eye {
+  position: inherit;
+  left:inherit;
+  top:inherit;
+  transform: translate(0%,0%);
+  transform-origin: center;
+}
+#Falling-Balloon-1 {
+  height: 65%;
+  width: auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-200%,-35%);
+}
+#Falling-Balloon-2 {
+  height: 55%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(120%,-70%);
+}
+#Falling-Balloon-3 {
+  height: 55%;
+  left:50%;
+  top:50%;
+  position: fixed;
+  transform: translate(40%,-20%);
+}
